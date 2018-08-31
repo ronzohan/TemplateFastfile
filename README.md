@@ -14,9 +14,9 @@
 
 #### Change these names in the *Fastfile* to your apps name
 ```
-APP_NAME = "Tower App.xcworkspace"
-STAGING_SCHEME = "Taste N Go Dev"
-PRODUCTION_SCHEME = "Taste N Go"
+APP_NAME = "Sample App.xcworkspace"
+STAGING_SCHEME = "Sample App Dev"
+PRODUCTION_SCHEME = "Sample App"
 ```
 
 
