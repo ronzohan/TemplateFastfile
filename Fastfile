@@ -1,5 +1,6 @@
 default_platform(:ios)
 
+# TODO: Change these based on your app
 APP_NAME = "Tower App.xcworkspace"
 STAGING_SCHEME = "Taste N Go Dev"
 PRODUCTION_SCHEME = "Taste N Go"
@@ -31,21 +32,21 @@ def build_app(scheme, bump_type = nil)
   else
     update_build_number()
   end
+  
   build_app(workspace: APP_NAME, scheme: scheme)
-  #upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+  upload_to_app_store(skip_metadata: true, skip_screenshots: true)
 end
 
 platform :ios do
   desc "Push a new production build to the App Store"
   lane :production do |options|
     bump_type = options[:bump_type]
-    build_app(scheme = STAGING_SCHEME, bump_type = bump_type)
+    build_app(scheme = PRODUCTION_SCHEME, bump_type = bump_type)
   end
 
   desc "Upload new staging build to the App Store"
   lane :staging do |options|
     bump_type = options[:bump_type]
-    build_app(scheme = PRODUCTION_SCHEME, bump_type = bump_type)
+    build_app(scheme = STAGING_SCHEME, bump_type = bump_type)
   end
 end
-
