@@ -12,6 +12,14 @@
 * Uploads app to **testflight** depending which lane has been used
 * There are currently two lanes defined: **production** and **staging**
 
+#### Change these names in the *Fastfile* to your apps name
+```
+APP_NAME = "Tower App.xcworkspace"
+STAGING_SCHEME = "Taste N Go Dev"
+PRODUCTION_SCHEME = "Taste N Go"
+```
+
+
 ## Example usage
 * Open up Terminal, cd into your top-level project directory, and run the following commands:
   
