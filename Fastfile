@@ -38,7 +38,7 @@ def build_app(scheme, bump_type = nil)
 end
 
 platform :ios do
-  desc "Push a new production build to the App Store"
+  desc "Upload new production build to the App Store"
   lane :production do |options|
     bump_type = options[:bump_type]
     build_app(scheme = PRODUCTION_SCHEME, bump_type = bump_type)
