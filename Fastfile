@@ -1,9 +1,9 @@
 default_platform(:ios)
 
 # TODO: Change these based on your app
-APP_NAME = "Tower App.xcworkspace"
-STAGING_SCHEME = "Taste N Go Dev"
-PRODUCTION_SCHEME = "Taste N Go"
+APP_NAME = "Sample App.xcworkspace"
+STAGING_SCHEME = "Sample App Dev"
+PRODUCTION_SCHEME = "Sample App"
 
 def update_build_number(build_number: nil)
   # If build number is provided explicitly, then use that build number instead
